@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "../styles/CardContainer.css";
 import { shuffle, ensureAtLeastOneUnclicked } from "../utils/cardUtils";
+import { capitalize } from "../utils/formatter";
 
 function Card({ id, onClick, clicked, img, name }) {
   return (
@@ -10,13 +11,13 @@ function Card({ id, onClick, clicked, img, name }) {
       className={`card card-${id} ${clicked ? "clicked" : ""}`}
     >
       <img src={img} alt="" />
-      <p>{name}</p>
+      <p>{capitalize(name)}</p>
     </button>
   );
 }
 
-export default function CardContainer({ setScore, data }) {
-  const totalCards = 5;
+export default function CardContainer({ score, setScore, data }) {
+  const totalCards = 10;
   const visibleCardsCount = 5;
 
   const initialCards = Array.from({ length: totalCards }, (_, index) => ({
@@ -41,9 +42,12 @@ export default function CardContainer({ setScore, data }) {
     const clickedCard = cards.find((card) => card.id === id);
 
     if (clickedCard.clicked) {
-      setMessage("Game Over! You clicked the same card.");
+      setMessage(
+        `Game Over! You clicked the same card. Your Score is ${score}`
+      );
+
       setIsGameOver(true);
-      setScore(0);
+
       return;
     }
 

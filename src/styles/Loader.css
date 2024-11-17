@@ -1,0 +1,8 @@
+.loader-container {
+  flex-grow: 1;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

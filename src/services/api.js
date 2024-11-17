@@ -1,4 +1,4 @@
-const numberOfRequests = 50;
+const numberOfRequests = 20;
 const cacheKey = "pokemonDataCache";
 
 async function api() {
@@ -20,7 +20,7 @@ async function api() {
 
       const data = await response.json();
       pokemonData.push({
-        id: data.id,
+        id: i,
         name: data.name,
         img: data.sprites.front_default,
       });
