@@ -16,10 +16,15 @@ function Card({ id, onClick, clicked, img, name }) {
   );
 }
 
-export default function CardContainer({ score, setScore, data }) {
-  const totalCards = 10;
-  const visibleCardsCount = 5;
-
+export default function CardContainer({
+  score,
+  setScore,
+  data,
+  totalCards,
+  setOnHome,
+  setBestScore,
+  visibleCardsCount,
+}) {
   const initialCards = Array.from({ length: totalCards }, (_, index) => ({
     id: index + 1,
     clicked: false,
@@ -29,25 +34,19 @@ export default function CardContainer({ score, setScore, data }) {
   const [visibleCards, setVisibleCards] = useState(() =>
     ensureAtLeastOneUnclicked(shuffle([...initialCards]), visibleCardsCount)
   );
-
-  // For displaying game messages
-  // Track game state
   const [message, setMessage] = useState("");
   const [isGameOver, setIsGameOver] = useState(false);
 
   // Prevent clicks after game over
   function handleCardClick(id) {
     if (isGameOver) return;
-
     const clickedCard = cards.find((card) => card.id === id);
 
     if (clickedCard.clicked) {
       setMessage(
         `Game Over! You clicked the same card. Your Score is ${score}`
       );
-
       setIsGameOver(true);
-
       return;
     }
 
@@ -84,12 +83,20 @@ export default function CardContainer({ score, setScore, data }) {
     setScore(0);
   }
 
+  function handleQuit() {
+    setOnHome(true);
+    setIsGameOver(true);
+    setScore(0);
+    setBestScore(0);
+  }
+
   return (
     <div className="card-container">
       {message && (
         <div className="message">
           <p>{message}</p>
           <button onClick={resetGame}>Restart Game</button>
+          <button onClick={handleQuit}>Quit Game</button>
         </div>
       )}
       {!isGameOver && (
