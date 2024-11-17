@@ -1,4 +1,4 @@
-const numberOfRequests = 20;
+const numberOfRequests = 50;
 const cacheKey = "pokemonDataCache";
 
 async function api() {
@@ -29,7 +29,6 @@ async function api() {
     // Cache the fetched data in localStorage
     localStorage.setItem(cacheKey, JSON.stringify(pokemonData));
 
-    console.log("Fetched new data:", pokemonData);
     return pokemonData;
   } catch (error) {
     console.error("Error fetching Pokémon data:", error);

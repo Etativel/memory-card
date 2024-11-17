@@ -20,6 +20,7 @@
   padding: 24px;
   flex-wrap: wrap;
   width: fit-content;
+  max-width: 2000px;
   justify-content: center;
   align-items: center;
   height: fit-content;
