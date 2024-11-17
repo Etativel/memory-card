@@ -8,16 +8,68 @@
   flex-grow: 1;
   background-color: blue;
   display: flex;
-  gap: 24px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 24px;
 }
 
-.card {
+.card-sub-container {
+  display: flex;
+  background-color: white;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+/* .card {
   background-color: black;
   color: white;
   min-width: 300px;
   min-height: 400px;
+} */
+
+/* Card Hard Difficulty */
+.card {
+  /* background-color: black; */
+  color: white;
+  min-width: 200px;
+  min-height: 300px;
+
+  cursor: pointer;
+}
+
+.card.card-1 {
+  background-color: blue;
+}
+
+.card.card-2 {
+  background-color: red;
+}
+
+.card.card-3 {
+  background-color: green;
+}
+
+.card.card-4 {
+  background-color: purple;
+}
+
+.card.card-5 {
+  background-color: orange;
+}
+
+.card.card-6 {
+  background-color: yellow;
+}
+
+.card.card-7 {
+  background-color: pink;
+}
+
+.card.card-8 {
+  background-color: teal;
 }
