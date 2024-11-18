@@ -36,25 +36,30 @@
 }
 
 .card-container {
+  /* margin-top: 64px; */
   flex-grow: 1;
-  background-color: #181b1d;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 .card-sub-container {
   display: flex;
-  background-color: #181b1d;
+  flex-direction: column;
+  background-color: transparent;
   gap: 24px;
   padding: 24px;
   flex-wrap: wrap;
   width: fit-content;
   max-width: 2000px;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: fit-content; */
+  height: 100vh;
 }
 
 /* .card {
@@ -85,9 +90,9 @@
     hsl(0deg 0% 11%) 100%
   );
   border: 0px;
-  min-width: 200px;
+  min-width: 250px;
   min-height: 300px;
-  border-radius: 6px;
+  border-radius: 18px;
   cursor: pointer;
   /* font-family: pokemon-solid; */
   /* font-size: 1.5rem; */
@@ -96,6 +101,11 @@
   transition: transform 0.4s ease;
   padding-top: 18px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.animate {
+  transform: translateX(0%);
+  opacity: 100%;
 }
 
 .card:hover {
@@ -133,7 +143,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  align-items: center;
   justify-content: center;
+  height: fit-content;
+
+  padding-top: 24px;
+  padding-bottom: 100px;
 }
 
 .desc {
@@ -183,4 +198,14 @@
 
 .grey-typ {
   padding-right: 4px;
+}
+
+.music-btn-card {
+  position: absolute;
+  left: 0;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }

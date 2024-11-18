@@ -17,6 +17,14 @@ function App() {
   const [difficulty, setDifficulty] = useState("");
   const [loading, setLoading] = useState("false");
 
+  useEffect(() => {
+    async function fetchData() {
+      const pokemonData = await api();
+      setData(pokemonData);
+    }
+    fetchData();
+  }, []);
+
   let visibleCardsCount;
   let totalCards;
   switch (difficulty) {
@@ -29,8 +37,8 @@ function App() {
       visibleCardsCount = 10;
       break;
     case "insane":
-      totalCards = 50;
-      visibleCardsCount = 50;
+      totalCards = 20;
+      visibleCardsCount = 20;
       break;
   }
 
@@ -46,14 +54,6 @@ function App() {
     setBestScore(score);
   }, [score]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const pokemonData = await api();
-      setData(pokemonData);
-    }
-    fetchData();
-  }, []);
-
   return (
     <div className="app-container">
       {loading ? (
@@ -65,7 +65,7 @@ function App() {
           ) : onHome ? (
             <Home setOnHome={setOnHome} setDifficulty={setDifficulty} />
           ) : (
-            <>
+            <div className="play-container">
               <Header
                 score={score}
                 bestScore={bestScore}
@@ -83,9 +83,9 @@ function App() {
                 setOnHome={setOnHome}
                 setDifficulty={setDifficulty}
               />
-            </>
+            </div>
           )}
-          {data.length !== 0 && <Footer />}
+          {onHome && data.length !== 0 && <Footer />}
         </>
       )}
     </div>

@@ -10,4 +10,19 @@
   height: auto;
   min-height: 100vh;
   /* background-color: yellow; */
+  background-color: blue;
+  background-image: url("../../public/vecteezy_create-a-simple-slightly-cartoonish-background_30657893.jpg");
+  background-size: cover; /* Ensures the image fits within the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+}
+
+.play-container {
+  height: 100vh;
+  /* max-height: fit-content; */
+  background-image: url("../../public/wp1902707-grass-pokemon-wallpapers.jpg");
+  background-size: cover; /* Ensures the image fits within the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  overflow-y: hidden;
 }
