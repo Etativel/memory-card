@@ -1,8 +1,13 @@
 .loader-container {
   flex-grow: 1;
-  background-color: blue;
+  background-color: #181b1d;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.loading-gif {
+  height: 200px;
+  width: 280px;
 }

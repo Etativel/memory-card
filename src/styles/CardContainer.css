@@ -1,3 +1,33 @@
+:root {
+  --black-background: rgba(22, 20, 27, 255);
+  --pixel: 5px;
+  --grass: #78c850;
+  --fire: #f08030;
+  --water: #6890f0;
+  --bug: #a8b820;
+  --normal: #a8a878;
+  --poison: #a040a0;
+  --electric: #f8d030;
+  --ground: #e0c068;
+  --fairy: #ee99ac;
+  --fighting: #c03028;
+  --psychic: #f85888;
+  --rock: #b8a038;
+  --ghost: #705898;
+  --steel: #b8b8d0;
+  --ice: #98d8d8;
+  --flying: #a890f0;
+}
+
+@font-face {
+  font-family: pokemon-hollow;
+  src: url("../assets/fonts/pokemon/Pokemon_Hollow.ttf");
+}
+@font-face {
+  font-family: pokemon-solid;
+  src: url("../assets/fonts/pokemon/Pokemon_Solid.ttf");
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -36,13 +66,98 @@
 /* Card Hard Difficulty */
 .card {
   /* background-color: black; */
-  color: black;
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 1% 18%) 0%,
+    hsl(0deg 1% 18%) 8%,
+    hsl(0deg 1% 17%) 17%,
+    hsl(0deg 1% 16%) 25%,
+    hsl(0deg 1% 16%) 34%,
+    hsl(0deg 1% 15%) 42%,
+    hsl(0deg 1% 15%) 50%,
+    hsl(0deg 1% 14%) 59%,
+    hsl(0deg 0% 13%) 67%,
+    hsl(0deg 0% 13%) 75%,
+    hsl(0deg 0% 12%) 84%,
+    hsl(0deg 0% 12%) 92%,
+    hsl(0deg 0% 11%) 100%
+  );
+  border: 0px;
   min-width: 200px;
   min-height: 300px;
-
+  border-radius: 6px;
   cursor: pointer;
+  /* font-family: pokemon-solid; */
+  /* font-size: 1.5rem; */
+  letter-spacing: 3px;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+  padding-top: 18px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  height: 150px;
+  width: auto;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 35%) 0%,
+    hsl(0deg 0% 33%) 7%,
+    hsl(0deg 0% 31%) 15%,
+    hsl(0deg 0% 29%) 23%,
+    hsl(0deg 0% 27%) 31%,
+    hsl(0deg 0% 26%) 40%,
+    hsl(0deg 0% 24%) 48%,
+    hsl(0deg 1% 22%) 57%,
+    hsl(0deg 1% 21%) 66%,
+    hsl(0deg 1% 19%) 74%,
+    hsl(0deg 1% 17%) 83%,
+    hsl(0deg 1% 16%) 92%,
+    hsl(0deg 1% 14%) 100%
+  );
+  border-radius: 50%;
 }
 
 .card-sub-container {
   display: flex;
+  flex-direction: column;
+}
+
+.card-c-c {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 24px;
+}
+
+.weight-height {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.id-type {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.type-bullet {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: white;
 }

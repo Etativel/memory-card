@@ -1,17 +1,47 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "../styles/CardContainer.css";
+import "../styles/PokemonType.css";
 import { shuffle, ensureAtLeastOneUnclicked } from "../utils/cardUtils";
-import { capitalize } from "../utils/formatter";
+import { capitalize, formatNumber, getType } from "../utils/formatter";
 
-function Card({ id, onClick, clicked, img, name }) {
+function Card({ id, onClick, clicked, pokemon }) {
   return (
     <button
       onClick={() => onClick(id)}
-      className={`card card-${id} ${clicked ? "clicked" : ""}`}
+      className={`card card-${id} ${clicked ? "clicked" : ""} ${getType(
+        pokemon.type[0]
+      )}`}
     >
-      <img src={img} alt="" />
-      <p>{capitalize(name)}</p>
+      <div className="id-type">
+        <p className="id">#{formatNumber(pokemon.p_id)}</p>
+        <p
+          style={{
+            backgroundColor: `var(--${getType(pokemon.type[0])})`,
+          }}
+          className="type-bullet"
+        ></p>
+      </div>
+      <img src={pokemon.img} alt="" className="card-img" />
+      <div className="desc">
+        <p>{capitalize(pokemon.name)}</p>
+        <div className="weight-height">
+          <div className="weight">
+            <p className="w-title">Weight</p>
+            <p className="w-text">{pokemon.weight}</p>
+          </div>
+          <div className="height">
+            <p className="h-title">Height</p>
+            <p className="h-text">{pokemon.height}</p>
+          </div>
+        </div>
+        <div className="type">
+          <p className="t-type">
+            <span className="grey-typ">Type:</span>
+            {pokemon.type[0]}
+          </p>
+        </div>
+      </div>
     </button>
   );
 }
@@ -101,19 +131,25 @@ export default function CardContainer({
       )}
       {!isGameOver && (
         <div className="card-sub-container">
-          {visibleCards.map((card) => {
-            const pokemon = data.find((item) => item.id === card.id);
-            return (
-              <Card
-                key={card.id}
-                id={card.id}
-                onClick={handleCardClick}
-                clicked={card.clicked}
-                img={pokemon ? pokemon.img : ""}
-                name={pokemon ? pokemon.name : ""}
-              />
-            );
-          })}
+          <div className="guessed-card">
+            {score}/{totalCards}
+          </div>
+          <div className="card-c-c">
+            {visibleCards.map((card) => {
+              const pokemon = data.find((item) => item.id === card.id);
+              return (
+                <Card
+                  pokemon={pokemon}
+                  key={card.id}
+                  id={card.id}
+                  onClick={handleCardClick}
+                  clicked={card.clicked}
+                  img={pokemon ? pokemon.img : ""}
+                  name={pokemon ? pokemon.name : ""}
+                />
+              );
+            })}
+          </div>
         </div>
       )}
     </div>

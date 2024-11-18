@@ -1,0 +1,67 @@
+:root {
+  --pixel: 5px;
+}
+
+.grass {
+  border: solid #78c850 var(--pixel);
+}
+
+.fire {
+  border: solid #f08030 var(--pixel);
+}
+
+.water {
+  border: solid #6890f0 var(--pixel);
+}
+
+.bug {
+  border: solid #a8b820 var(--pixel);
+}
+
+.normal {
+  border: solid #a8a878 var(--pixel);
+}
+
+.poison {
+  border: solid #a040a0 var(--pixel);
+}
+
+.electric {
+  border: solid #f8d030 var(--pixel);
+}
+
+.ground {
+  border: solid #e0c068 var(--pixel);
+}
+
+.fairy {
+  border: solid #ee99ac var(--pixel);
+}
+
+.fighting {
+  border: solid #c03028 var(--pixel);
+}
+
+.psychic {
+  border: solid #f85888 var(--pixel);
+}
+
+.rock {
+  border: solid #b8a038 var(--pixel);
+}
+
+.ghost {
+  border: solid #705898 var(--pixel);
+}
+
+.steel {
+  border: solid #b8b8d0 var(--pixel);
+}
+
+.ice {
+  border: solid #98d8d8 var(--pixel);
+}
+
+.flying {
+  border: solid #a890f0 var(--pixel);
+}

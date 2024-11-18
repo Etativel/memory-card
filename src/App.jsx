@@ -69,8 +69,7 @@ function App() {
           setOnHome={setOnHome}
         />
       )}
-
-      <Footer />
+      {data.length !== 0 && <Footer />}
     </div>
   );
 }
