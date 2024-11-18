@@ -24,20 +24,20 @@ function Card({ id, onClick, clicked, pokemon }) {
       </div>
       <img src={pokemon.img} alt="" className="card-img" />
       <div className="desc">
-        <p>{capitalize(pokemon.name)}</p>
+        <p className="pokemon-name">{capitalize(pokemon.name)}</p>
         <div className="weight-height">
           <div className="weight">
-            <p className="w-title">Weight</p>
+            <p className="w-title grey-text">Weight</p>
             <p className="w-text">{pokemon.weight}</p>
           </div>
           <div className="height">
-            <p className="h-title">Height</p>
+            <p className="h-title grey-text">Height</p>
             <p className="h-text">{pokemon.height}</p>
           </div>
         </div>
         <div className="type">
           <p className="t-type">
-            <span className="grey-typ">Type:</span>
+            <span className="grey-typ grey-text">Type:</span>
             {pokemon.type[0]}
           </p>
         </div>
@@ -54,6 +54,7 @@ export default function CardContainer({
   setOnHome,
   setBestScore,
   visibleCardsCount,
+  setDifficulty,
 }) {
   const initialCards = Array.from({ length: totalCards }, (_, index) => ({
     id: index + 1,
@@ -114,10 +115,14 @@ export default function CardContainer({
   }
 
   function handleQuit() {
-    setOnHome(true);
+    setDifficulty("");
+
     setIsGameOver(true);
     setScore(0);
     setBestScore(0);
+    setTimeout(() => {
+      setOnHome(true);
+    }, 1001);
   }
 
   return (

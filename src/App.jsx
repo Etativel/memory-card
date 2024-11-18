@@ -15,6 +15,7 @@ function App() {
   const [data, setData] = useState([]);
   const [onHome, setOnHome] = useState(true);
   const [difficulty, setDifficulty] = useState("");
+  const [loading, setLoading] = useState("false");
 
   let visibleCardsCount;
   let totalCards;
@@ -34,6 +35,13 @@ function App() {
   }
 
   useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [difficulty]);
+
+  useEffect(() => {
     if (score < bestScore) return;
     setBestScore(score);
   }, [score]);
@@ -48,28 +56,38 @@ function App() {
 
   return (
     <div className="app-container">
-      {!onHome && (
-        <Header score={score} bestScore={bestScore} totalCards={totalCards} />
-      )}
-
-      {data.length === 0 ? (
+      {loading ? (
         <Loader />
-      ) : onHome ? (
-        <Home setOnHome={setOnHome} setDifficulty={setDifficulty} />
       ) : (
-        <CardContainer
-          setScore={setScore}
-          setBestScore={setBestScore}
-          score={score}
-          bestScore={bestScore}
-          data={data}
-          difficulty={difficulty}
-          visibleCardsCount={visibleCardsCount}
-          totalCards={totalCards}
-          setOnHome={setOnHome}
-        />
+        <>
+          {data.length === 0 ? (
+            <Loader />
+          ) : onHome ? (
+            <Home setOnHome={setOnHome} setDifficulty={setDifficulty} />
+          ) : (
+            <>
+              <Header
+                score={score}
+                bestScore={bestScore}
+                totalCards={totalCards}
+              />
+              <CardContainer
+                setScore={setScore}
+                setBestScore={setBestScore}
+                score={score}
+                bestScore={bestScore}
+                data={data}
+                difficulty={difficulty}
+                visibleCardsCount={visibleCardsCount}
+                totalCards={totalCards}
+                setOnHome={setOnHome}
+                setDifficulty={setDifficulty}
+              />
+            </>
+          )}
+          {data.length !== 0 && <Footer />}
+        </>
       )}
-      {data.length !== 0 && <Footer />}
     </div>
   );
 }
