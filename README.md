@@ -49,11 +49,11 @@ A fun and interactive memory card game where players test their memory by trying
    ```
 3. Install dependencies:
    ```bash
-       npm install
+    npm install
    ```
 4. Start the development server:
    ```bash
-       npm run dev
+    npm run dev
    ```
 5. Open the game in your browser:
    ```bash
