@@ -4,6 +4,10 @@ A fun and interactive memory card game where players test their memory by trying
 
 ---
 
+🌐 **Live Demo**: [https://memory-card-beige-alpha.vercel.app/](https://memory-card-beige-alpha.vercel.app/)
+
+---
+
 ## Table of Contents
 
 - [Features](#features)
@@ -18,10 +22,6 @@ A fun and interactive memory card game where players test their memory by trying
 - **Dynamic Pokémon Cards**: Unique cards with Pokémon details (name, type, weight, and height).
 - **Background Music**: Battle-themed music
 - **Responsive Design**: The game adjuststed for desktop and mobile devices.
-
----
-
-🌐 **Live Demo**: [https://memory-card-beige-alpha.vercel.app/](https://memory-card-beige-alpha.vercel.app/)
 
 ---
 
