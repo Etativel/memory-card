@@ -22,7 +22,7 @@ A fun and interactive memory card game where players test their memory by trying
 
 - **Dynamic Pokémon Cards**: Unique cards with Pokémon details (name, type, weight, and height).
 - **Background Music**: Battle-themed music
-- **Responsive Design**: The game adjuststed for desktop and mobile devices.
+- **Responsive Design**: The game adjusted for desktop and mobile devices.
 
 ---
 
