@@ -1,6 +1,6 @@
 # Memory Card Game
 
-A fun and interactive memory card game where players test their memory by trying not to click the same card twice! The game features Pokémon-themed cards, dynamic animations, and background music for an immersive experience.
+A fun and interactive memory card game where players test their memory by trying not to click the same card twice! The game features Pokémon-themed cards, dynamic animations, and background music.
 
 ---
 
