@@ -46,7 +46,7 @@ A fun and interactive memory card game where players test their memory by trying
    ```
 2. Navigate to the project directory:
    ```bash
-   cd memory-card-game
+   cd memory-card
    ```
 3. Install dependencies:
    ```bash
