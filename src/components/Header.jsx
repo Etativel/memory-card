@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import "../styles/Header.css";
 
-export default function Header({ score, bestScore }) {
+import pokeCard from "..//assets/icons/PokeCard (2).png";
+
+export default function Header() {
   return (
     <div className="header-container">
-      <div className="main">Card Game</div>
-      <div className="score-board">Score: {score}</div>
-      <div className="score-board">Best Score: {bestScore}</div>
+      <div className="main">
+        <img className="poke-card" src={pokeCard} alt="PokeCard" />
+      </div>
     </div>
   );
 }
