@@ -28,10 +28,10 @@ export default function Home({ setOnHome, setDifficulty }) {
   function handleMusic() {
     if (audioRef.current.paused) {
       audioRef.current.play();
-      setIsPlaying(true); // Music is playing
+      setIsPlaying(true);
     } else {
       audioRef.current.pause();
-      setIsPlaying(false); // Music is playing
+      setIsPlaying(false);
     }
   }
 

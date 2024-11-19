@@ -41,7 +41,6 @@
 }
 
 .card-container {
-  /* margin-top: 64px; */
   flex-grow: 1;
   background-color: transparent;
   display: flex;
@@ -59,42 +58,13 @@
   background-color: transparent;
   gap: 24px;
   padding: 24px;
-  /* flex-wrap: wrap; */
   width: fit-content;
   max-width: 2000px;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* height: fit-content; */
   height: 100vh;
 }
 
-/* .card {
-  background-color: black;
-  color: white;
-  min-width: 300px;
-  min-height: 400px;
-} */
-
 /* Card Hard Difficulty */
 .card {
-  /* background-color: black; */
-  /* color: white;
-  background-image: linear-gradient(
-    180deg,
-    hsl(0deg 1% 18%) 0%,
-    hsl(0deg 1% 18%) 8%,
-    hsl(0deg 1% 17%) 17%,
-    hsl(0deg 1% 16%) 25%,
-    hsl(0deg 1% 16%) 34%,
-    hsl(0deg 1% 15%) 42%,
-    hsl(0deg 1% 15%) 50%,
-    hsl(0deg 1% 14%) 59%,
-    hsl(0deg 0% 13%) 67%,
-    hsl(0deg 0% 13%) 75%,
-    hsl(0deg 0% 12%) 84%,
-    hsl(0deg 0% 12%) 92%,
-    hsl(0deg 0% 11%) 100%
-  ); */
   background-image: linear-gradient(
     0deg,
     hsl(125deg 18% 72%) 0%,
@@ -116,8 +86,6 @@
   min-height: 300px;
   border-radius: 18px;
   cursor: pointer;
-  /* font-family: pokemon-solid; */
-  /* font-size: 1.5rem; */
   letter-spacing: 3px;
   transform: scale(1);
   transition: transform 0.4s ease;
@@ -137,22 +105,6 @@
 .card-img {
   height: 150px;
   width: auto;
-  /* background-image: linear-gradient(
-    180deg,
-    hsl(0deg 0% 35%) 0%,
-    hsl(0deg 0% 33%) 7%,
-    hsl(0deg 0% 31%) 15%,
-    hsl(0deg 0% 29%) 23%,
-    hsl(0deg 0% 27%) 31%,
-    hsl(0deg 0% 26%) 40%,
-    hsl(0deg 0% 24%) 48%,
-    hsl(0deg 1% 22%) 57%,
-    hsl(0deg 1% 21%) 66%,
-    hsl(0deg 1% 19%) 74%,
-    hsl(0deg 1% 17%) 83%,
-    hsl(0deg 1% 16%) 92%,
-    hsl(0deg 1% 14%) 100%
-  ); */
   background-image: linear-gradient(
     0deg,
     hsl(199deg 67% 79%) 0%,
@@ -279,10 +231,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%; /* Line length */
+  width: 100%;
   height: 4px;
-  background-color: red; /* Line color */
-  transform: translate(-50%, -50%) rotate(45deg); /* Rotate the line */
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: center;
 }
 
@@ -302,7 +254,6 @@
   min-width: 500px;
   justify-content: space-between;
   padding: 24px;
-  /* background-color: red; */
 }
 
 .guessed,
@@ -314,7 +265,6 @@
 }
 
 .message {
-  /* background-color: white; */
   display: flex;
   flex-direction: column;
   height: 30%;

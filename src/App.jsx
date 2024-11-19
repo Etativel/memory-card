@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
-// import Loader from "./components/Loader";
 import { api } from "./services/api";
 import Home from "./components/Home";
 

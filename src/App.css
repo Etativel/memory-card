@@ -12,18 +12,15 @@
   /* background-color: yellow; */
   background-color: blue;
   background-image: url("/vecteezy_create-a-simple-slightly-cartoonish-background_30657893.jpg");
-  background-size: cover; /* Ensures the image fits within the container */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .play-container {
   height: 100vh;
-  /* max-height: fit-content; */
-  /* background-image: url("/wp1902707-grass-pokemon-wallpapers.jpg"); */
-  /* background-image: url("/2306.w063.n005.147B.p1.147.jpg"); */
-  background-size: cover; /* Ensures the image fits within the container */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   overflow-y: hidden;
 }
