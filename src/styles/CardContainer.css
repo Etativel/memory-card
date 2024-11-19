@@ -264,6 +264,14 @@
   font-weight: bold;
 }
 
+.best-score,
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .message {
   display: flex;
   flex-direction: column;

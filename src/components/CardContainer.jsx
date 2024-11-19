@@ -189,8 +189,12 @@ export default function CardContainer({
         <div className={`card-sub-container`}>
           <div className="card-text-hero">
             <div className="score-board-container">
-              <div className="score">SCORE: {score}</div>
-              <div className="best-score">BEST SCORE: {bestScore}</div>
+              <div className="score">
+                <p>SCORE</p> {score}
+              </div>
+              <div className="best-score">
+                <p>BEST</p> {bestScore}
+              </div>
             </div>
             <div className="guessed">
               {score} / {totalCards}
