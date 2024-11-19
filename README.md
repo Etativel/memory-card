@@ -14,6 +14,7 @@ A fun and interactive memory card game where players test their memory by trying
 - [Demo](#demo)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
+- [Resource Used](#Resource-used)
 
 ---
 
@@ -68,3 +69,11 @@ A fun and interactive memory card game where players test their memory by trying
 - **Vite**: Fast bundling and development setup.
 - **Node.js**: For managing dependencies.
 - **Pokémon API/Assets**: Custom Pokémon details and assets.
+
+## Resource Used
+
+- https://www.vecteezy.com/photo/30657893-create-a-simple-slightly-cartoonish-background
+- https://www.dafont.com/pokemon.font
+- https://textcraft.net/style/Textcraft/pokemon
+- https://downloads.khinsider.com/game-soundtracks/album/pokemon-game-boy-pok-mon-sound-complete-set-play-cd
+- https://www.pngwing.com/en/search?q=pokeball
